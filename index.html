@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Resume Builder</h1>
+    <div id="template-selector">
+      <label for="template">Choose Template:</label>
+      <select id="template">
+        <option value="template1">Template 1</option>
+        <option value="template2">Template 2</option>
+        <option value="template3">Template 3</option>
+      </select>
+    </div>
+    <button id="dark-mode-toggle" title="Toggle dark mode">🌙</button>
+  </header>
+  <main>
+    <section id="form-section">
+      <h2>Enter Your Information</h2>
+      <form id="resume-form">
+        <div class="form-group">
+          <label for="profile-image">Profile Image:</label>
+          <input type="file" id="profile-image" name="profile-image" accept="image/*">
+        </div>
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input type="text" id="phone" name="phone">
+        </div>
+        <div class="form-group">
+          <label for="about">About You:</label>
+          <textarea id="about" name="about" rows="3" placeholder="Write a short summary about yourself..."></textarea>
+        </div>
+        <div id="dynamic-sections">
+          <!-- Dynamic sections like Education, Projects, etc. will be added here -->
+        </div>
+        <button type="button" id="add-education">Add Education</button>
+        <button type="button" id="add-project">Add Project</button>
+        <button type="button" id="add-experience">Add Experience</button>
+        <button type="button" id="add-skill">Add Skill</button>
+        <button type="button" id="add-certification">Add Certification</button>
+        <button type="button" id="add-language">Add Language</button>
+        <button type="button" id="add-award">Add Award</button>
+        <button type="button" id="add-interest">Add Interest</button>
+        <button type="button" id="add-reference">Add Reference</button>
+      </form>
+    </section>
+    <section id="preview-section">
+      <h2>Live Preview</h2>
+      <iframe id="resume-preview" title="Resume Preview"></iframe>
+    </section>
+  </main>
+  <!-- Floating AI Chatbot Button -->
+  <div id="ai-chatbot-circle">
+    <span>🤖</span>
+  </div>
+  <div id="ai-chatbot-window" style="display:none;">
+    <div id="ai-chatbot-header">AI Assistant <button id="ai-chatbot-close">×</button></div>
+    <div id="ai-suggestions">Ask for suggestions as you fill your resume!</div>
+    <div id="ai-chatbot-input-row">
+      <input id="ai-user-input" type="text" placeholder="Type your question..." />
+      <button id="ai-send-btn">Send</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+  <script src="ai-assistant.js"></script>
+</body>
+</html>

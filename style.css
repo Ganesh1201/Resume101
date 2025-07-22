@@ -1,0 +1,223 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  background: #f7f7f7;
+  color: #222;
+}
+header {
+  background: #4f8cff;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#template-selector {
+  display: flex;
+  align-items: center;
+}
+#template-selector label {
+  margin-right: 0.5rem;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+#form-section, #ai-assistant, #preview-section {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  flex: 1 1 300px;
+  min-width: 300px;
+}
+#form-section {
+  max-width: 400px;
+}
+#ai-assistant {
+  display: none;
+}
+#preview-section {
+  flex: 2 1 500px;
+  min-width: 400px;
+}
+form .form-group {
+  margin-bottom: 1rem;
+}
+form label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+form input, form textarea, form select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+button {
+  background: #4f8cff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(79,140,255,0.08);
+}
+button:hover {
+  background: #357ae8;
+}
+button:active {
+  box-shadow: 0 1px 4px rgba(79,140,255,0.15);
+}
+#resume-preview {
+  width: 100%;
+  height: 600px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+}
+#ai-chatbot-circle {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 64px;
+  height: 64px;
+  background: #4f8cff;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  cursor: pointer;
+  z-index: 1000;
+  transition: background 0.2s;
+}
+#ai-chatbot-circle:hover {
+  background: #357ae8;
+}
+#ai-chatbot-window {
+  position: fixed;
+  bottom: 110px;
+  right: 32px;
+  width: 320px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  border: 1px solid #e0e0e0;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+#ai-chatbot-header {
+  background: #4f8cff;
+  color: #fff;
+  padding: 0.7rem 1rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#ai-chatbot-header button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+#ai-suggestions {
+  padding: 1rem;
+  color: #222;
+  min-height: 60px;
+}
+#ai-chatbot-input-row {
+  display: flex;
+  border-top: 1px solid #eee;
+  padding: 0.5rem;
+  background: #fafbfc;
+}
+#ai-user-input {
+  flex: 1;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+#ai-send-btn {
+  background: #4f8cff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#ai-send-btn:hover {
+  background: #357ae8;
+}
+body.dark-mode {
+  background: #181a1b;
+  color: #f1f1f1;
+}
+body.dark-mode header {
+  background: #232946;
+  color: #eebbc3;
+}
+body.dark-mode #form-section, body.dark-mode #preview-section {
+  background: #232946;
+  color: #eebbc3;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+body.dark-mode button, body.dark-mode #ai-chatbot-circle, body.dark-mode #ai-chatbot-window {
+  background: #393e46;
+  color: #eebbc3;
+}
+body.dark-mode button:hover, body.dark-mode #ai-chatbot-circle:hover {
+  background: #232946;
+}
+#dark-mode-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+#dark-mode-toggle:hover {
+  color: #ffd966;
+}
+.profile-image-preview {
+  display: block;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 2px solid #4f8cff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+body.dark-mode .profile-image-preview {
+  border-color: #eebbc3;
+}
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #preview-section {
+    min-width: unset;
+  }
+}
