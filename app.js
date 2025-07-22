@@ -274,3 +274,19 @@ updatePreview();
 
 // Placeholder for AI assistant integration
 // See ai-assistant.js for details
+
+const downloadBtn = document.getElementById('download-resume');
+downloadBtn.onclick = function() {
+  const doc = previewFrame.contentDocument || previewFrame.contentWindow.document;
+  const html = doc.documentElement.outerHTML;
+  const blob = new Blob([html], { type: 'text/html' });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'resume.html';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+};
