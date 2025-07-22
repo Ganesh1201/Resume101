@@ -221,3 +221,21 @@ body.dark-mode .profile-image-preview {
     min-width: unset;
   }
 }
+#download-resume {
+  background: #28a745;
+  color: #fff;
+  margin-top: 1rem;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+#download-resume:hover {
+  background: #218838;
+}
+body.dark-mode #download-resume {
+  background: #44d17a;
+  color: #232946;
+}
+body.dark-mode #download-resume:hover {
+  background: #28a745;
+  color: #fff;
+}
